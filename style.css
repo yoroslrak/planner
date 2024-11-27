@@ -1,1 +1,70 @@
+body,
+html {
+    background-color: #F2F2F2;
+    font-family: sans-serif;
+}
+
+.inputname {
+   
+    background-color: white;
+    height: 33px;
+    width: 500;
+    border-radius: 10px;
+    font-size: 30px;
+    font-family: sans-serif;
+
+    border: 1px solid black;
+}
+
+.addtext {
+    background-color: white;
+    height: 80px;
+    width: 900;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.inputtime {
+ 
+
+    background-color: white;
+    height: 33px;
+    width: 100;
+    border-radius: 10px;
+    font-size: 30px;
+    font-family: sans-serif;
+
+    border: 1px solid black;
+}
+
+.selectday {
+
+    color: #757575;
+    background-color: white;
+    height: 33px;
+    width: 180;
+    border-radius: 10px;
+    font-size: 30px;
+    font-family: sans-serif;
+    border: 1px solid black;
+
+}
+
+
+.addbtn {
+    padding-left: 20px;
+    border: 1px solid black;
+    background-color: white;
+    height: 33px;
+    width: 40;
+    border-radius: 10px;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #757575;
+
+}
+
 
