@@ -80,7 +80,7 @@ html {
 .dayinside{
     background-color: white;
     width: 700px;
-    height: 400px;
+    min-height: 400px;
     margin-top: 5px;
     padding-top: 5px;
     padding-left: 30px;
