@@ -76,3 +76,15 @@ html {
     padding-left: 30px;
     border-radius: 10px;
 }
+
+.dayinside{
+    background-color: white;
+    width: 700px;
+    height: 400px;
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-left: 30px;
+    border-radius: 10px;
+    position: relative;
+    top: -9px;
+}
