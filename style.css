@@ -127,3 +127,21 @@ summary {
    
    
 }
+
+@media (orientation: portrait), (max-width: 700px) {
+    .addtext{
+        flex-wrap: wrap;
+    }
+     .task{
+        flex-direction: column;
+     }
+     .task-text{
+        width: 100%;
+        padding-bottom: 10px;
+     }
+     .task div{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+     }
+}
