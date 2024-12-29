@@ -3,8 +3,8 @@ body, html {
     padding: 0;
     background-color: #F2F2F2;
     font-family: Arial, sans-serif;
+    animation: fadeIn 1s ease-in-out;
 }
-
 
 .addtext {
     background-color: white;
@@ -16,8 +16,8 @@ body, html {
     gap: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 20px;
+    animation: slideIn 0.5s ease-out;
 }
-
 
 .inputname, .inputtime, .selectday {
     height: 40px;
@@ -27,21 +27,17 @@ body, html {
     font-size: 16px;
 }
 
-
 .inputname {
     flex: 2;
 }
-
 
 .inputtime {
     flex: 1;
 }
 
-
 .selectday {
     flex: 1.5;
 }
-
 
 .addbtn {
     background-color: #007BFF;
@@ -56,23 +52,20 @@ body, html {
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: pulse 1.5s infinite;
 }
-
 
 .addbtn:hover {
     background-color: #0056b3;
 }
 
-
 .osnova {
     margin: 20px;
 }
 
-
 details {
     margin-bottom: 10px;
 }
-
 
 summary {
     background-color: white;
@@ -81,8 +74,8 @@ summary {
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    animation: fadeIn 1s ease-in-out;
 }
-
 
 .dayinside {
     background-color: #FFF;
@@ -90,22 +83,18 @@ summary {
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   display: flex;
-   flex-direction: column;
-   gap: 15px;
-
-
- 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: slideIn 0.5s ease-out;
 }
-
 
 .dayinside p {
     display: inline-block;
     margin: 0;
     font-size: 1rem;
-  flex: 1 0;
+    flex: 1 0;
 }
-
 
 .dayinside button {
     margin-left: 10px;
@@ -116,32 +105,64 @@ summary {
     cursor: pointer;
     background-color: #007BFF;
     color: white;
+    animation: fadeIn 1.5s ease-in-out;
 }
-
 
 .dayinside button:hover {
     background-color: #0056b3;
 }
-.task{
+
+.task {
     display: flex;
-   
-   
+    animation: fadeIn 2s ease-out;
 }
 
 @media (orientation: portrait), (max-width: 700px) {
-    .addtext{
+    .addtext {
         flex-wrap: wrap;
     }
-     .task{
+    .task {
         flex-direction: column;
-     }
-     .task-text{
+    }
+    .task-text {
         width: 100%;
         padding-bottom: 10px;
-     }
-     .task div{
+    }
+    .task div {
         display: flex;
         flex-direction: column;
         gap: 10px;
-     }
+    }
+}
+
+/* Keyframe Animations */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
