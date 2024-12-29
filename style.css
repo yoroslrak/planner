@@ -4,6 +4,7 @@ body, html {
     background-color: #F2F2F2;
     font-family: Arial, sans-serif;
     animation: fadeIn 1s ease-in-out;
+    perspective: 1500px; /* Add perspective to the entire body for 3D effect */
 }
 
 .addtext {
@@ -16,7 +17,8 @@ body, html {
     gap: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 20px;
-    animation: slideIn 0.5s ease-out;
+    animation: slideIn 1s ease-out, rotateIn 2s ease-in-out; /* Apply both sliding and 3D rotation */
+    transform-origin: center;
 }
 
 .inputname, .inputtime, .selectday {
@@ -52,7 +54,7 @@ body, html {
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: pulse 1.5s infinite;
+    animation: pulse 1.5s infinite, rotate3D 3s infinite alternate; /* Apply 3D rotation */
 }
 
 .addbtn:hover {
@@ -86,7 +88,7 @@ summary {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    animation: slideIn 0.5s ease-out;
+    animation: slideIn 0.5s ease-out, rotateIn 2s ease-in-out; /* Apply 3D rotation */
 }
 
 .dayinside p {
@@ -166,3 +168,27 @@ summary {
         transform: scale(1);
     }
 }
+
+@keyframes rotateIn {
+    0% {
+        transform: rotateY(-90deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes rotate3D {
+    0% {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    50% {
+        transform: rotateY(180deg) rotateX(180deg);
+    }
+    100% {
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+}
+
